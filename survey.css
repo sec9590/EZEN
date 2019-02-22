@@ -1,0 +1,28 @@
+h1{
+  color : brown;
+  text-align: center;
+}
+hr{
+  border: 1px, solid;
+}
+form{
+  background-color: rgb(232, 165, 154) ;
+  font-family: "휴먼편지체";
+}
+.p1{
+  color : blue;
+  font-weight: bold;
+  font-family: none;
+}
+p{
+  font-family: "휴먼편지체";
+}
+footer{
+  background-color: orange;
+  border-radius: 7px;
+  font-family: "휴먼편지체";
+  margin-top: 10px;
+}
+body{
+  background: AliceBlue;
+}
