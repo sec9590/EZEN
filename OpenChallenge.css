@@ -2,18 +2,13 @@ h1{
   color : brown;
   text-align: center;
 }
-body{
-  background: AliceBlue;
-}
-hr{
-  border: 1px, solid;
-}
+
 h3{
   color : blue;
   text-shadow: 2px 2px 2px skyblue;
 }
 ul{
-  border : 1px dotted;
+  padding-left: 30px;
 }
 a{
   text-decoration: none;
@@ -24,8 +19,35 @@ p{
   text-indent: 1em;
 }
 footer{
-  background-color: orange;
-  border-radius: 7px;
   font-family: "휴먼편지체";
-  
+  background: rgb(210, 158, 206);
+  position: fixed;
+  bottom : 0;
+  left: 0;
+  height: 10%;
+  width : 100%;
+}
+header{
+  position: fixed;
+  top : 0;
+  left : 0;
+  width : 100%;
+  height: 15%;
+  background : rgb(225, 247, 161);
+}
+nav{
+  position: fixed;
+  left : 0;
+  top : 15%;
+  height: 75%;
+  width : 15%;
+  background: rgb(233, 154, 61);
+}
+section{
+  position: fixed;
+  background: rgb(149, 211, 224);
+  right: 0;
+  height: 75%;
+  top:15%;
+  width : 85%;
 }
