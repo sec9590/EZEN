@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>부트스트랩 설문조사</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet"> <!-- 부트스트랩 -->
+  <style media="screen">
+    .p1{
+      color : rgb(51, 122, 183);
+      font-weight: bold;
+      font-size : large;
+      font-family: none;
+      text-align : right;
+    }
+  </style>
+</head>
+
+<body>
+  <div style="margin-top : 0px; float:left; width : 100%; ">
+    <div class="jumbotron" style="background :  rgb(51, 122, 183); border : rgb(51, 122, 183) 2px solid; padding-bottom:15px;">
+      <h2 style="text-align : center; font-weight : bold; margin : -10px; color : white;">설문조사</h2><br><br>
+      <p style="font-size : 13pt; text-align : center; color : white">소프트웨어 기술에 대한 의견을 듣습니다. 많은 참여 부탁드립니다</p>
+    </div>
+  </div>
+
+  <table align="center" width="80%" Height="500px">
+    <tr>
+      <td><span class="p1">학년&nbsp&nbsp</span></td>
+      <td><label class="radio-inline">
+          <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked> 1학년
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked> 2학년
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked> 3학년
+        </label></td>
+    </tr>
+    <tr>
+      <td ><span class="p1">성별&nbsp&nbsp</span></td>
+      <td><label class="radio-inline">
+          <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 남
+          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          <label class="radio-inline">
+            <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 여
+          </label></td>
+    </tr>
+    <tr>
+      <td>
+        <span class="p1">관심분야</span>
+      </td>
+      <td>
+        <select class="form-control">
+          <option value="1">모바일소프트웨어</option>
+          <option value="2">웹 프로그래밍</option>
+          <option value="3">데이터베이스</option>
+        </select>
+
+      </td>
+    </tr>
+
+  <tr>
+    <td><span class="p1">진로&nbsp&nbsp</span>
+    </td>
+    <td>
+      <label class="radio-inline">
+        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 개발
+      </label>
+      &nbsp
+      <label class="radio-inline">
+        <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 기획
+      </label>
+      &nbsp
+      <label class="radio-inline">
+        <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 영업
+      </label>
+      &nbsp
+      <label class="radio-inline">
+        <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 창업
+      </label>
+    &nbsp</td>
+  </tr>
+
+  <tr>
+    <td colspan="2" style="" ><span class="p1">남기고 싶은 말</span><br><br>
+      <textarea class="form-control" rows="3">글을 남겨주세요.</textarea></td>
+
+  </tr>
+
+  </table>
+  <div class=" row">
+    <div class="col-md-12" style="background : rgb(51, 122, 183); position: fixed; left : 0;bottom:0px; right:0px; width : 100%;">
+      <p style="margin-top : 15px; padding-top :s -20px; "> Copyright 2017 by kitae</p>
+      <embed src="oc_media/whitechristmas.mp3" autoplay hidden="true">
+    </div>
+  </div>
+
+
+  <!-- jQuery (부트스트랩의 자바스크립트 플러그인을 위해 필요합니다) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <!-- 모든 컴파일된 플러그인을 포함합니다 (아래), 원하지 않는다면 필요한 각각의 파일을 포함하세요 -->
+  <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>
