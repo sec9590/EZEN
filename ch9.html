@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>마우스 클릭 연습</title>
+  <style media="screen">
+    img {
+      width: 20px;
+      height: 20px;
+    }
+
+    td {
+      text-align: center;
+      width: 70px;
+    }
+  </style>
+  <script>
+    function move() {
+
+      var t = document.getElementsByTagName('img');
+      var random = Math.floor(Math.random() * 100);
+      var img = t[random];
+      img.src = "oc_media/donkey.png";
+
+      var click = null;
+      img.onclick = function(e) {
+        if (e.target.tagName.toLowerCase() == 'img')
+          move();
+
+        if (click == null)
+          e.target.style.visibility = "hidden";
+        click = e.target;
+      }
+
+
+    }
+  </script>
+</head>
+
+<body onload="move()">
+  <h3>마우스 클릭 연습</h3>
+  <hr>
+  <table border="1px solid collapse" width=500px height=300px>
+    <tr>
+      <td><img src="" alt=""></td>
+      <td><img src="" alt=""></td>
+      <td><img src="" alt=""></td>
+      <td><img src="" alt=""></td>
+      <td><img src="" alt=""></td>
+      <td><img src="" alt=""></td>
+      <td><img src="" alt=""></td>
+      <td><img src="" alt=""></td>
+      <td><img src="" alt=""></td>
+      <td><img src="" alt=""></td>
+    </tr>
+    <tr>
+      <td><img src="" alt=""></td>
+      <td><img src="" alt=""></td>
+      <td><img src="" alt=""></td>
+      <td><img src="" alt=""></td>
+      <td><img src="" alt=""></td>
+      <td><img src="" alt=""></td>
+      <td><img src="" alt=""></td>
+      <td><img src="" alt=""></td>
+      <td><img src="" alt=""></td>
+      <td><img src="" alt=""></td>
+    </tr>
+    <tr>
+      <td><img src="" alt=""></td>
+      <td><img src="" alt=""></td>
+      <td><img src="" alt=""></td>
+      <td><img src="" alt=""></td>
+      <td><img src="" alt=""></td>
+      <td><img src="" alt=""></td>
+      <td><img src="" alt=""></td>
+      <td><img src="" alt=""></td>
+      <td><img src="" alt=""></td>
+      <td><img src="" alt=""></td>
+    </tr>
+    <tr>
+      <td><img src="" alt=""></td>
+      <td><img src="" alt=""></td>
+      <td><img src="" alt=""></td>
+      <td><img src="" alt=""></td>
+      <td><img src="" alt=""></td>
+      <td><img src="" alt=""></td>
+      <td><img src="" alt=""></td>
+      <td><img src="" alt=""></td>
+      <td><img src="" alt=""></td>
+      <td><img src="" alt=""></td>
+    </tr>
+    <tr>
+      <td><img src="" alt=""></td>
+      <td><img src="" alt=""></td>
+      <td><img src="" alt=""></td>
+      <td><img src="" alt=""></td>
+      <td><img src="" alt=""></td>
+      <td><img src="" alt=""></td>
+      <td><img src="" alt=""></td>
+      <td><img src="" alt=""></td>
+      <td><img src="" alt=""></td>
+      <td><img src="" alt=""></td>
+    </tr>
+    <tr>
+      <td><img src="" alt=""></td>
+      <td><img src="" alt=""></td>
+      <td><img src="" alt=""></td>
+      <td><img src="" alt=""></td>
+      <td><img src="" alt=""></td>
+      <td><img src="" alt=""></td>
+      <td><img src="" alt=""></td>
+      <td><img src="" alt=""></td>
+      <td><img src="" alt=""></td>
+      <td><img src="" alt=""></td>
+    </tr>
+    <tr>
+      <td><img src="" alt=""></td>
+      <td><img src="" alt=""></td>
+      <td><img src="" alt=""></td>
+      <td><img src="" alt=""></td>
+      <td><img src="" alt=""></td>
+      <td><img src="" alt=""></td>
+      <td><img src="" alt=""></td>
+      <td><img src="" alt=""></td>
+      <td><img src="" alt=""></td>
+      <td><img src="" alt=""></td>
+    </tr>
+    <tr>
+      <td><img src="" alt=""></td>
+      <td><img src="" alt=""></td>
+      <td><img src="" alt=""></td>
+      <td><img src="" alt=""></td>
+      <td><img src="" alt=""></td>
+      <td><img src="" alt=""></td>
+      <td><img src="" alt=""></td>
+      <td><img src="" alt=""></td>
+      <td><img src="" alt=""></td>
+      <td><img src="" alt=""></td>
+    </tr>
+    <tr>
+      <td><img src="" alt=""></td>
+      <td><img src="" alt=""></td>
+      <td><img src="" alt=""></td>
+      <td><img src="" alt=""></td>
+      <td><img src="" alt=""></td>
+      <td><img src="" alt=""></td>
+      <td><img src="" alt=""></td>
+      <td><img src="" alt=""></td>
+      <td><img src="" alt=""></td>
+      <td><img src="" alt=""></td>
+    </tr>
+    <tr>
+      <td><img src="" alt=""></td>
+      <td><img src="" alt=""></td>
+      <td><img src="" alt=""></td>
+      <td><img src="" alt=""></td>
+      <td><img src="" alt=""></td>
+      <td><img src="" alt=""></td>
+      <td><img src="" alt=""></td>
+      <td><img src="" alt=""></td>
+      <td><img src="" alt=""></td>
+      <td><img src="" alt=""></td>
+    </tr>
+  </table>
+  <br><br>
+
+</body>
+
+</html>
