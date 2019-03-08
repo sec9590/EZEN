@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>RegExp</title>
+  <script>
+
+    function isValidId(id){ //아이디검사
+      var regx = /^[a-z][a-zA-Z0-9]{5,11}$/; //(첫글자는 소문자, 이후 영문자/숫자 사용가능하고 6~12자)
+      return regx.test(id);
+    }
+
+    function isValidPwd(password) { //비밀번호검사
+      var regx = /^.*(?=^.{8,12}$)(?=.*\d)(?=.*[a-zA-Z])(?=.*[!@#$%^&+=]).*$/;
+      return regx.test(password);
+    }
+
+    function isValidEmail(email) { //이메일검사
+      var regx =  /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
+      return regx.test(email);
+    }
+    function isValidPhone(phone) { //전화번호 검사
+      var regx = /^\d{2,3}-\d{3,4}-\d{4}$/;
+      return regx.test(phone);
+    }
+
+    function pwdCheck(){ //비밀번호확인
+      var passwordv = document.getElementById("password");
+      var checkv = document.getElementById("check");
+      var check = checkv.value;
+      var password = passwordv.value;
+      var pwdcheck = document.getElementById("pwdcheck");
+
+      if(password == "" | check == ""){
+        pwdcheck.innerHTML = "입력안함";
+        pwdcheck.style.color = "red";
+      }
+      else{
+        if(password == check){
+          pwdcheck.innerHTML = "일치";
+          pwdcheck.style.color = "blue";
+        }
+        else {
+          pwdcheck.innerHTML = "불일치";
+          pwdcheck.style.color = "red";
+        }
+      }
+    }
+
+    function isValid(){ //유효성검사
+
+      var idv = document.getElementById("id");
+      var passwordv = document.getElementById("password");
+      var checkv = document.getElementById("check");
+      var phonev = document.getElementById("phone");
+      var emailv = document.getElementById("email");
+      var p = document.getElementById("p");
+
+      //value의 값 설정
+      var id = idv.value;
+      var password = passwordv.value;
+      var check = checkv.value;
+      var phone = phonev.value;
+      var email = emailv.value;
+
+
+      var text = "";
+      if(!isValidId(id))
+        text += "아이디를 잘못입력하셨습니다.\n";
+      if(!isValidPwd(password))
+        text += "비밀번호를 잘못입력하셨습니다.\n";
+      if(!isValidPwd(check))
+        text += "비밀번호 확인을 잘못입력하셨습니다.\n";
+      if(!isValidEmail(email))
+        text += "이메일을 잘못입력하셨습니다.\n";
+      if(!isValidPhone(phone))
+        text += "전화번호를 잘못입력하셨습니다.\n";
+
+      alert(text);
+
+    }
+
+
+  </script>
+</head>
+
+<body>
+  <h3>회원가입</h3>
+  <hr>
+  <div style="border : 2px solid rgb(197, 108, 199)">
+    <table height="300" align="center">
+      <form>
+        <tr>
+          <td>로그인 ID : </td>
+          <td><input type="text" name="" value="" id="id"></td>
+          <td> (첫글자는 소문자, 이후 영문자/숫자 사용가능하고 6~12자)</td>
+        </tr>
+        <tr>
+          <td>패스워드 : </td>
+          <td><input type="password" name="" value="" id="password"></td>
+          <td> (영문자/숫자/특수문자를 1회 이상 사용하고 8~12자</td>
+        </tr>
+        <tr>
+          <td>패스워드 확인 : </td>
+          <td><input type="password" name="" value="" id="check"></td>
+          <td id="pwdcheck"> </td>
+        </tr>
+        <tr>
+          <td>이메일 :</td>
+          <td><input type="email" name="" value="" id="email" onclick="pwdCheck()"></td>
+          <td> ( 예시 : abcdef@gmail.com )</td>
+        </tr>
+        <tr>
+          <td>휴대폰 :</td>
+          <td><input type="tel" name="" value="" id="phone"></td>
+          <td> ( 예시 : 010-xxxx-xxxx )</td>
+        </tr>
+
+      </form>
+    </table>
+
+
+  </div>
+  <br>
+  <div style="text-align: center">
+    <input type="button" name="" value="유효성 검사" onclick="isValid(); pwdCheck()" style="background : rgb(75, 119, 217); color:white; width:100px; height:50px; border:1px solid; font-weight : bold ">
+  </div>
+
+</body>
+
+</html>
